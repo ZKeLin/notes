@@ -61,4 +61,5 @@
         3. 浏览器查询临时文件目录发现有cache内容，于是检查max-age，已经过期，发现资源带有ETag，于是在请求包中带上If-None-Match: "12345678"，发请求给web server
         4. Web server收到请求后发现有If-None-Match，于是和被请求资源的验证串进行比对，如果校验串的内容不一致，则返回整个资源包体（HTTP状态200），如果校验串的内容一致，仅返回包头（HTTP状态304），告诉浏览器继续使用临时目录里的cache内容展示。
 
-    
+    
+参考于： http://www.51testing.com/html/43/434343-243768.html
