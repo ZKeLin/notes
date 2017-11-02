@@ -1,0 +1,2 @@
+bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.andro
+id.bundle --platform android --assets-dest ./android/app/src/main/res/ --dev false
