@@ -83,3 +83,4 @@ Function.prototype.bind = function(context){
 	}
 }
 ```
+
