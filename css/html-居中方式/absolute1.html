@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute 负margin</title>
+	<style type="text/css">
+		.wrap{
+			border: 1px solid red;
+			position: relative;
+			width: 300px;
+			height: 300px;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: green;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -50px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			
+		</div>
+	</div>
+	<p>超级简单，就是top,left是以右上角进行定位（右上角在正中心）的，然后用margin进行调节</p>
+</body>
+</html>

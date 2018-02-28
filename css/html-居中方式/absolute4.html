@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute calc</title>
+	<style type="text/css">
+		.wrap{
+			border: 1px solid red;
+			position: relative;
+			width: 300px;
+			height: 300px;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: green;
+			position: absolute;
+			top: calc(50% - 50px);
+			left: calc(50% - 50px);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			
+		</div>
+	</div>
+	<p>calc可以动态计算,可以是任何的长度单位，<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc">详见</a></p>
+</body>
+</html>
