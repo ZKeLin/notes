@@ -47,3 +47,4 @@ function is_power_of_two(x){
 }
 ```
 ###### ["来自于这"](https://www.youtube.com/watch?v=7jkIUgLC29I )
+###### ["官方文档"](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
