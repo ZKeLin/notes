@@ -1,4 +1,5 @@
 ### http缓存
+  ![](./images/http-cache-flowChart.png)
   #### 浏览器请求数据有时会重复请求相同的数据，会产生大量没有必要的网络请求，拖慢浏览器的资源加载速度，影响用户体验
   通过设置http Response Headers Cache-control的属性，来设置浏览器缓存从而来降低网络请求，避免浏览器发起不必要的请求，以至于浏览器重新下载资源
   如果设置了http Request Headers Cache-control 为max-age=0,no-cache,则会直接请求服务器，不管你的response的缓存数据有没有过期（可以通过设置浏览器的Disable cache来设置Request Cache-control,或直接在请求头中设置）
