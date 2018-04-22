@@ -83,4 +83,28 @@ Function.prototype.bind = function(context){
 	}
 }
 ```
+### js模块机制
 
+##### 利用闭包来实现模块的定义，以及依赖其他模块的技巧
+
+```javascript
+//require.js的简化版，但是已经写出其核心代码
+var Modules = (function(){
+	var modules = {};
+	function define(moduleName,deps,impl){
+		for(var i = 0; i < deps.length; i++){
+			deps[i] = modules[deps[i]];
+		}
+		modules[moduleName] = impl.apply(impl,deps);//主要是这行代码
+	}
+	function get(name){
+		return modules[mame]
+	}
+
+	return {
+		define: define,
+		get: get
+	}
+})
+
+```
