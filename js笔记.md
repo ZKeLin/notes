@@ -105,6 +105,6 @@ var Modules = (function(){
 		define: define,
 		get: get
 	}
-})()`
+})()
 
 ```

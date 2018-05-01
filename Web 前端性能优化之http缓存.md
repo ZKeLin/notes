@@ -1,4 +1,5 @@
 ### http缓存
+  ![](./images/缓存01.png)
   ![](./images/http-cache-flowChart.png)
   #### 浏览器请求数据有时会重复请求相同的数据，会产生大量没有必要的网络请求，拖慢浏览器的资源加载速度，影响用户体验
   通过设置http Response Headers Cache-control的属性，来设置浏览器缓存从而来降低网络请求，避免浏览器发起不必要的请求，以至于浏览器重新下载资源
@@ -64,4 +65,5 @@
         4. Web server收到请求后发现有If-None-Match，于是和被请求资源的验证串进行比对，如果校验串的内容不一致，则返回整个资源包体（HTTP状态200），如果校验串的内容一致，仅返回包头（HTTP状态304），告诉浏览器继续使用临时目录里的cache内容展示。
 
     
-参考于： http://www.51testing.com/html/43/434343-243768.html     https://segmentfault.com/a/1190000008956069
+参考于： http://www.51testing.com/html/43/434343-243768.html  
+        https://segmentfault.com/a/1190000008956069
