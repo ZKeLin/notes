@@ -3,7 +3,7 @@
 ### 函数柯里化
 作用：  
 1，参数复用  
-```
+```javascript
 var currying = function(fn){
 	var args = [].slice.call(arguments,1);
 	return function(){
@@ -14,7 +14,7 @@ var currying = function(fn){
 ```
 
 eg: 
-``` 
+```javascript
 var show = currying(function(){
 	var args = [].slice.call(argument);
 	console.log(args.join());
@@ -24,7 +24,7 @@ show(1,2,3); //复用参数,1,2,3
 ```
 2，延迟执行  
 例子：遍历本月每天的开销并求出他们的总和  
-```
+```javascript
 var currying = function(fn){
 	var args = [];
 	return function(){
@@ -37,7 +37,7 @@ var currying = function(fn){
 	}
 }
 ```
-```
+```javascript
 var cost = (function(){
 	var money = 0;
 	return function(){
@@ -48,14 +48,14 @@ var cost = (function(){
 	}
 })();
 ```
-```
+```javascript
 var costA = currying(cost);
 costA(100); //没有计算
 costA(200); //没有计算
 console.log(costA()); //300
 ```
 3，提前返回，例如为兼容浏览器而添加的事件方法  
-```
+```javascript
 var addEvent = (function(){
     if (window.addEventListener) {
         return function(el, sType, fn, capture) {
@@ -74,7 +74,7 @@ var addEvent = (function(){
 ```
 这样就不用每次用事件监听函数都进行if else 判断了。  
 #### ES5的bind方法就是柯里化的实现  
-```
+```javascript
 Function.prototype.bind = function(context){
 	var self = this
 		,args = [].slice.call(arguments);
@@ -83,6 +83,8 @@ Function.prototype.bind = function(context){
 	}
 }
 ```
+[柯里化，防抖，截流，对象拷贝](https://github.com/lensh/blog/issues/1)
+
 ### js模块机制
 
 ##### 利用闭包来实现模块的定义，以及依赖其他模块的技巧
